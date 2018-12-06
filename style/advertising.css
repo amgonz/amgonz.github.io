@@ -1,0 +1,54 @@
+
+/* box layout */
+.grid-container {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-columns: repeat(6, 1fr) .5fr;
+  grid-template-areas:
+    'side-nav top-row top-row top-row top-row top-row right-margin'
+    'side-nav quick-info quick-info quick-info quick-info quick-info right-margin'
+    'side-nav acos-graph acos-graph acos-graph acos-graph acos-graph right-margin'
+    'side-nav acos-graph acos-graph acos-graph acos-graph acos-graph right-margin'
+    'side-nav ad-profits ad-profits ad-profits ad-profits ad-profits right-margin'
+    'side-nav ad-profits ad-profits ad-profits ad-profits ad-profits right-margin';
+  grid-gap: 2em; 
+  padding: 0;
+
+}
+.grid-container > div:not([class='right-margin']):not([class='top-row']) {
+  text-align: center;
+  padding: 20px 0;
+} 
+
+/* background color */
+.right-margin, .grid-container{
+  background-color: #eeeeee;
+}
+
+/* box elements */
+.top-row{
+  grid-area: top-row;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+.side-nav{
+  grid-area: side-nav;
+}
+.quick-info{
+  grid-area: quick-info;
+  display: flex;
+  justify-content: space-around;
+  
+}
+.right-margin{
+  grid-area: right-margin;
+}
+.acos-graph{
+  grid-area: acos-graph;
+}
+.ad-profits{
+  grid-area: ad-profits;
+}
+
+

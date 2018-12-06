@@ -1,0 +1,44 @@
+/* box layout */
+.grid-container {
+    display: grid;
+    grid-template-rows: 1fr auto auto auto auto;
+    grid-template-columns: repeat(6, 1fr) .5fr;
+    grid-template-areas:
+      'side-nav quick-info quick-info quick-info quick-info quick-info right-margin'
+      'side-nav inventory-forecast inventory-forecast inventory-forecast inventory-forecast inventory-forecast right-margin'
+      'side-nav inventory-forecast inventory-forecast inventory-forecast inventory-forecast inventory-forecast right-margin'
+      'side-nav inventory-table inventory-table inventory-table inventory-table inventory-table right-margin'
+      'side-nav inventory-table inventory-table inventory-table inventory-table inventory-table right-margin';
+    grid-gap: 2em; 
+    padding: 0;
+  
+  }
+  .grid-container > div:not([class='right-margin']) {
+    text-align: center;
+    padding: 20px 0;
+  } 
+  
+  /* background color */
+  .right-margin, .grid-container{
+    background-color: #eeeeee;
+  }
+
+
+  /* box elements */
+  .side-nav{
+      grid-area: side-nav;
+  }
+  .quick-info{
+      grid-area: quick-info;
+      display: flex;
+      justify-content: space-between;
+  }
+  .inventory-forecast{
+      grid-area: inventory-forecast;
+  }
+  .inventory-table{
+      grid-area: inventory-table
+  }
+  .right-margin{
+      grid-area: right-margin;
+  }

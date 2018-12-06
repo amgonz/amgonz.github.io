@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="img/dashdolphin_favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/template.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style/app-template.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style/demo.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="jquery.js"></script> 
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <title>Demo</title>
+</head>
+<body>
+        <header class="row">
+                <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                          <!-- Brand and toggle get grouped for better mobile display -->
+                          <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="index.html">DashDolphin</a>
+                          </div>
+                      
+                          <!-- Collect the nav links, forms, and other content for toggling -->
+                          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="pricing.html">Pricing</a></li>
+                                <li><a href="demo.html">Demo</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#">Sign Up</a></li>
+                              <li><a href="#">Sign In</a></li>
+                            </ul>
+                          </div><!-- /.navbar-collapse -->
+                        </div><!-- /.container-fluid -->
+                      </nav>
+        </header>
+      
+<div class="grid-container" role="main">
+  
+  <div class="side-nav">
+        <div id="side-fixed">
+        <div><a href="demo.html">Dashboard</a></div>
+              
+            <div><a href="expenses.html">Expenses</a></div>
+            
+            <!-- <div><a href="inventory.html">Inventory</a></div> -->
+           
+            <div><a href="advertising.html">Advertising</a></div>
+        
+            <!-- <div><a id="last-side-a" href="">Customer Research</a></div> -->
+        </div>
+  </div>
+  <div class="right-margin"></div>
+  
+  <div class="top-row">
+      <div>Hello, Kenneth</div>
+      <div id="product-dropdown">
+                <select name="product dropdown" aria-label="click to select a single product to analyze" >
+                <option value="Product 1">All Products</option>
+                <option value="Product 1">Product 1</option>
+                <option value="Product 2">Product 2</option>
+                <option value="Product 3">Product 3</option>
+                <option value="Product 4">Product 4</option>
+            </select>
+        </div>
+      <div id="date-range">
+         <select name="date dropdown" aria-label="click to set a date range to analyze" >
+            <option value="Product 1">Date</option>
+            <option value="Product 1">Work in progress</option>
+            <option value="Product 2">Work in progress</option>
+            <option value="Product 3">Work in progress</option>
+            <option value="Product 4">Work in progress</option>
+         </select>
+        </div>
+  </div>
+  <div class="quick-info">
+        <div>
+            <h6>$67,928</h6>
+            <p>Revenues</p>
+        </div>
+        <div>
+            <h6>$32,322</h6>
+            <p>Expenses</p>
+        </div>
+        <div>
+                <h6>$35,606</h6>
+                <p>Profit</p>
+        </div>
+        <div>
+                <h6>52%</h6>
+                <p>Profit Margin</p>
+        </div>
+        <div>
+                <h6>87%</h6>
+                <p>Buy Box</p>
+        </div>
+    </div>
+  <div class="profit-graph" id="avg-profits"></div>
+
+  <div class="donut" id="donut-chart"></div>
+
+  <div class="organic-to-ads" id="organicAdChart"></div>
+
+
+</div>
+
+
+    <footer class="col-12">
+        <div class="col-2">
+        <img src="img/dashdolphin-logo.png" id="dashdolphin-logo" alt="Dash Dolphin Logo"/>
+        </div>
+        <div class="col-8">
+        <button>Start Free Tutorial</button>
+        <p>Questions? Email us! contact@DashDolphin.com</p>
+        </div>
+    </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- javascript -->
+<script src="js/avg-profits.js"></script>
+<script src="js/donut-chart.js"></script>
+<script src="js/activity-chart.js"> </script>
+<script src="js/organic-to-ads.js"></script>
+
+</body>
+</html>

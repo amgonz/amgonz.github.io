@@ -1,0 +1,80 @@
+
+/* box layout */
+.grid-container {
+  display: grid;
+  grid-template-rows: 1fr auto auto 6fr;
+  grid-template-columns: 1.175fr repeat(4, 1fr) 2fr .5fr;
+  grid-template-areas:
+    'side-nav top-row top-row top-row top-row top-row right-margin'
+    'side-nav quick-info quick-info quick-info quick-info quick-info right-margin'
+    'side-nav profit-graph profit-graph profit-graph profit-graph profit-graph right-margin'
+    'side-nav organic-to-ads organic-to-ads organic-to-ads  donut donut right-margin';
+  grid-gap: 2em; 
+  padding: 0;
+
+}
+.grid-container > div:not([class='right-margin']):not([class='top-row']) {
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+
+/* box elements */
+.top-row{
+    grid-area: top-row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.right-margin{
+    grid-area: right-margin;
+}
+
+.organic-to-ads {
+    grid-area: organic-to-ads;
+}
+.donut {
+    grid-area: donut;
+
+}
+.profit-graph{
+    grid-area: profit-graph;
+    height: 100%;
+}
+.quick-info{
+    grid-area: quick-info;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* box formating and shadowing */
+.quick-info div{
+    display: inline-block;
+    height: 6em;
+    width: 10em;
+    min-width: 5em;
+    padding: 2em;  
+  }
+
+#donut-chart, #organicAdChart {
+    height: 100%;
+}
+
+
+
+
+
+
+/* background color */
+.right-margin, .grid-container, .top-row {
+    background-color: #eeeeee;
+}
+
+
+
+
+ 
+ 

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="img/dashdolphin_favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style/template.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style/app-template.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style/inventory.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+    <title>Inventory</title>
+</head>
+<body>
+        <header class="row">
+                <nav class="col-12 navbar">
+                    <ul>
+                            <li><a href="index.html">DashDolphin</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="demo.html">Demo</a></li>
+
+                        </ul>
+                    </nav>
+        </header>
+        
+    <div class="grid-container">
+        <div class="side-nav">
+                <div id="side-fixed">
+                <div><a href="demo.html">Dashboard</a></div>
+                      
+                    <div><a href="expenses.html">Expenses</a></div>
+                    
+                    <div><a href="inventory.html">Inventory</a></div>
+                   
+                    <div><a href="advertising.html">Advertising</a></div>
+                
+                    <div><a id="last-side-a"href="">Customer Research</a></div>
+                </div>
+          </div>
+          <div class="right-margin"></div>
+          <div class="quick-info">
+              <div>Inventory Management</div>
+              <div>insight 1</div>
+              <div>insight 2</div>
+          </div>
+          <div class="inventory-forecast" id="inventory-forecast"></div>
+          <div class="inventory-table">
+              <table>
+                  <tr>
+                      <th>Product</th>
+                      <th>Inventory</th>
+                      <th>Lead Time</th>
+                      <th>Optimal Units Ordered</th>
+                      <th>Order by</th>
+                  </tr>
+                  <tr>
+                      <td>Product 1</td>
+                      <td>354</td>
+                      <td>21 days</td>
+                      <td>422</td>
+                      <td>October 14th, 2018</td>
+                  </tr>
+                  <tr>
+                        <td>Product 2</td>
+                        <td>2943</td>
+                        <td>30 days</td>
+                        <td>4201</td>
+                        <td>October 27th, 2018</td>
+                    </tr>
+                    <tr>
+                            <td>Product 3</td>
+                            <td>811</td>
+                            <td>14 days</td>
+                            <td>1243</td>
+                            <td>November 3rd, 2018</td>
+                        </tr>
+                        <tr>
+                                <td>Product 4</td>
+                                <td>655</td>
+                                <td>21 days</td>
+                                <td>727</td>
+                                <td>November 14th, 2018</td>
+                            </tr>
+              </table>
+          </div>
+
+    </div>
+
+        <footer class="col-12">
+                <div class="col-2">
+                <img src="img/dashdolphin-logo.png" id="dashdolphin-logo" alt="Dash Dolphin Logo"/>
+                </div>
+                <div class="col-8">
+                <button>Start Free Tutorial</button>
+                <p>Questions? Email us! contact@DashDolphin.com</p>
+                </div>
+            </footer>
+        
+    <script src="js/inventory-forecast.js"></script>
+</body>
+</html>
