@@ -49,8 +49,8 @@
 
 #btn-add-expense, #btn-add-expense:hover:after{
     display: flex;
-    justify-content: flex-start;
-    margin-top: 3%;
+    padding-left: 5px;
+    margin-top:3%;
     width: 15em;
     height: 4em;
     -webkit-box-shadow: 6px 9px 33px -5px rgba(0,0,0,0.75);
@@ -68,12 +68,19 @@
     -webkit-transition-property: transform;
     transition-property: transform;
 }
-button li {
+
+#btn-add-expense *{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#btn-add-expense li {
     display: inline-block;
     color: white;
     font-size: 1.5em;
+    
 }
-button li:first-child{
+#btn-add-expense li:first-child{
     margin-right: 2em;
 }
 #btn-add-expense:hover, #btn-add-expense:focus{
@@ -89,4 +96,15 @@ button li:first-child{
     background:rgb(251, 38, 0);
 
 }
+@media (prefers-reduced-motion: reduce){
+    #btn-add-expense, #btn-add-expense:hover:after,#btn-add-expense:hover, #btn-add-expense:focus{
 
+        -webkit-transform: none;
+        transform: none;
+        -webkit-transition-duration: none;
+        transition-duration: none;
+        -webkit-transition-property:none;
+        transition-property:none;
+    }
+
+}

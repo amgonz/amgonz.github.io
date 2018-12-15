@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+
+
     <link href="img/dashdolphin_favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" media="screen" href="style/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Lato:900|PT+Sans|Quicksand|Sarala|Source+Sans+Pro:300" rel="stylesheet">
@@ -16,6 +21,7 @@
     <title>Pricing Plans</title>
 </head>
 <body>
+        <a class="skip-main" href="#main">Skip to main content</a>
 
     <header>
             <nav class="navbar navbar-default">
@@ -35,7 +41,7 @@
                       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li><a href="faq.html">FAQ</a></li>
-                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a class="active" href="pricing.html">Pricing</a></li>
                             <li><a href="demo.html">Demo</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
@@ -48,7 +54,7 @@
     </header>
     <div class="row"></div>
     <section class="col-12" id="entire-content">
-    <div class="grid-container" role="main">
+    <div class="grid-container" >
 
         <div class="left-margin"></div>
         <div class="right-margin"></div>
@@ -58,11 +64,11 @@
             <h2>Choose the plan that's right for your business</h2>
         </div>
 
-            <div class="price-tiers">
+            <div class="price-tiers" role="main" id="main" tabindex="-1">
                 <div class="price-box">
                     <h3 class="tier-type">Entrepreneur</h3>
                     <div class="price">
-                        <h4>$9.99</h4>
+                        <h4>$19.95</h4>
                         <p>/mo</p>
                     </div>
                     <p class="order-limit">UP TO <em>2,500</em> ORDERS PER MONTH</p>
@@ -77,7 +83,7 @@
                 <div class="price-box">
                         <h3 class="tier-type">Business</h3>
                         <div class="price">
-                            <h4>$19.99</h4>
+                            <h4>$49.95</h4>
                             <p>/mo</p>
                         </div>
                         <p class="order-limit">UP TO <em>5,000</em> ORDERS PER MONTH</p>
@@ -92,7 +98,7 @@
                 <div class="price-box">
                         <h3 class="tier-type">Enterprise</h3>
                         <div class="price">
-                            <h4>$49.99</h4>
+                            <h4>$199.95</h4>
                             <p>/mo</p>
                         </div>
                         <p class="order-limit"><em>UNLIMITED</em> ORDERS PER MONTH</p>
@@ -112,20 +118,54 @@
 
 
 
-    <footer class="col-12 row">
+    <footer class="col-12 row" id="footer-main-page">
             <div class="col-2">
             <img src="img/dashdolphin-logo.png" id="dashdolphin-logo" alt="Dash Dolphin Logo"/>
             </div>
             <div class="col-8">
-            <button>COMING SOON</button>
             <p>Questions? Email us! contact@DashDolphin.com</p>
+            <br/>
+            <p>Owned and operated by <em>Indigo Softworks Inc.</em></p>
             </div>
-        </footer>
+    </footer>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+
+
+    <script>
+
+                // manages the color change of the navbar link depending on what link is chosen
+                $("nav a").on("click", function(){
+                $("nav").find(".active").removeClass("active");
+                $(this).addClass("active");
+                });
+
+                
+                    //keeps navbar from disapearing is mobile
+                // disapearing navbar only works on desktop. Detects if mobile
+                // also eliminates animations if on mobile
+                if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
+ 
+                var prevScrollpos = window.pageYOffset;
+                window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                document.querySelector(".navbar").style.top = "0";
+                $('link[title=aos]').removeAttr("href");
+
+                } else {
+                document.querySelector(".navbar").style.top = "-50px";
+
+                }
+                prevScrollpos = currentScrollPos;
+                }
+                }
+    
+    </script>
 </body>
 </html>

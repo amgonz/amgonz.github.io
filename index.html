@@ -4,22 +4,36 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        
+
+
+
+       
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+
+
         <link rel="stylesheet" type="text/css" media="screen" href="style/bootstrap.min.css">
 
         <link rel="stylesheet" type="text/css" media="screen" href="style/template.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
         <link href="img/dashdolphin_favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" title="aos">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
-
-
+     
         <title>DashDolphin</title>
 </head>
 
 <body>
+              
+
         <a class="skip-main" href="#main">Skip to main content</a>
+        <div class="disable-animations">
+                <p>disable animations?</p>
+                <i class="fas fa-check fa-sm" id="disable-true" aria-label="click here to disable animations"></i>
+                <i class="fas fa-times fa-sm" id="disable-false" aria-label="click here to dismiss animation question"></i>
+
+        </div>
         <header>
                 <nav class="navbar navbar-default">
                         <div class="container-fluid">
@@ -31,13 +45,14 @@
                               <span class="icon-bar"></span>
                               <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="index.html">DashDolphin</a>
+                            <a class="navbar-brand active" href="index.html">DashDolphin</a>
                           </div>
                       
                           <!-- Collect the nav links, forms, and other content for toggling -->
                           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li><a href="faq.html">FAQ</a></li>
+                                
+                                <li ><a href="faq.html">FAQ</a></li>
                                 <li><a href="pricing.html">Pricing</a></li>
                                 <li><a href="demo.html">Demo</a></li>
                             </ul>
@@ -49,11 +64,11 @@
                         </div><!-- /.container-fluid -->
                       </nav>
         </header>
-    <div id="img-tint"></div>
+    <!-- <div id="img-tint"></div> -->
         <div class="row"></div>
 
     <div class="grid-container" role="main" >   
-        <img src="img/background_img.jpg" alt="background image of mountain" id="background-img">
+        <!-- <img src="img/background-off-white.jpeg" alt="background image of mountain" id="background-img"> -->
  
       <div class="left-margin"></div>  
       <div class="right-margin"></div>
@@ -73,7 +88,7 @@
                 </div>
         </div>
       <div class="try-demo-section" data-aos="zoom-in"
-      data-aos-duration="1500"
+      data-aos-duration="1200"
       id="main" tabindex="-1">
                 
                 <img  id="try-demo-picture" src="img/computer_analytics.jpg" alt="View your business analytics on any device" />
@@ -91,44 +106,46 @@
                 </div>
       </div>
       <div class="features-headline large-h"  ><h3>Features</h3></div>
-      <div class="main-features-section" data-aos-duration="1500"
+      <div class="main-features-section" data-aos-duration="1200"
       data-aos="fade-up-right">
                         <div class="main-features" id="main-features">
                         <ul >
                                 <li>
-                                <span class="h4 bolder">Accounting</span>
+                                <h4 class="large-h">Accounting</h4>
                                 <span class="p large-p">DashDolphin has all the neccesary accounting features you'll need to track your profits and cash flows.</span>
                                 </li>
                                         
                                 <li>
-                                <span class="h4 bolder">Ad analysis</span>
+                                <h4 class="large-h">Ad analysis</h4>
                                 <span class="p large-p">Find out how well each of your ad campaigns are doing and get recommendations on bid values.</span>>
                                 </li>
                                         
                                 <li>
-                                <span class="h4 bolder">Consumer Targeting</span>
+                                <h4 class="large-h">Consumer Targeting</h4>
                                 <span class="p large-p">Find out where your consumers are so you can target them more efficiently with Facebook and Google ads.</span>
                                 </li>
 
                         </ul>
-                        <a href="./pricing.html" class="staticPageBtn">TRY YOUR FREE TRIAL</a>
+                        <a href="./pricing.html" class="staticPageBtn ">Free Trial</a>
                         </div>
                 <img id="main-features-picture" src="img/all-platforms.png" alt="Dash Dolphin is available on all platforms">
         </div>
 
       <div class="additional-features-headline"><h3 class="bolder">Not Enough?</h3></div>
 
-      <div class="additional-features-section" data-aos-duration="1500" 
+      <div class="additional-features-section" data-aos-duration="1200" 
       data-aos="fade-up-left">
               <div id="additional-features-left">
                         <ul>
                         <li>
-                            <h4>Constant updates   <i class="fas fa-undo fa-sm"></i></h4>
+                                <i class="fas fa-undo fa-3x"></i>
+                                <h4>Constant updates</h4>
                                 <p>Your sales data will be updated to the minute.</p>
                         </li>
                         
                         <li>
-                                <h4>Optimized User Interface   <i class="far fa-hand-pointer fa-sm"></i></h4>
+                                <i class="far fa-hand-pointer fa-3x"></i>
+                                <h4>Optimized User Interface</h4>
                                 <p>We show you everything you need to know without the fluff.</p>
                         </li>
                         
@@ -138,7 +155,8 @@
                         </li> -->
                         
                         <li>
-                            <h4>Multi-platform   <i class="fas fa-mobile-alt fa-sm"></i></h4>
+                            <i class="fas fa-mobile-alt fa-3x"></i>
+                            <h4>Multi-platform</h4>
                             <p>It doesn't matter whether you check in on desktop, laptop, tablet or mobile phone.
                                 DashDolphin looks great on each screen.</p>
                         </li>
@@ -152,13 +170,15 @@
               <div id="additional-features-right">
                 <ul>
                         <li>
-                                <h4>Instant Access   <i class="fas fa-fast-forward fa-sm"></i></h4>
+                                <i class="fas fa-fast-forward fa-3x"></i>
+                                <h4>Instant Access</h4>
                                 <p>Once you input your API key, your data will be available to you within minutes! 
                                 The setup could not be easier.</p>
                         </li>
                         
                         <li>
-                                <h4>Responsive Support   <i class="fas fa-headset fa-sm"></i></h4>
+                                <i class="fas fa-headset fa-3x"></i>
+                                <h4>Responsive Support</h4>
                             <p>Our customer support is online around the clock to help with any issues or confusion you may have.</p>
                         </li>
                                         
@@ -168,19 +188,20 @@
                         </li> -->
                         
                         <li>
-                            <h4>Secure   <i class="fas fa-user-lock fa-sm"></i></h4>
+                            <i class="fas fa-user-lock fa-3x"></i>
+                            <h4>Secure</h4>
                             <p>All of your data and information is encrypted and viewable by no one else, but you.</p>
                         </li>
                 </ul>
               </div>
       </div>
       <div class="value-add-headline"><h3>And even more...</h3></div>
-      <div class="value-add" data-aos-duration="1500" data-aos="flip-up">
+      <div class="value-add" data-aos-duration="1200" data-aos="fade-in">
                 
                 <div>
                         <h4>Cross-browser compatibility</h4>
                         <div>
-                                <i class="fas fa-desktop fa-3x"></i>
+                                <i class="fas fa-desktop fa-3x" style="color:blue"></i>
                         </div>
                     <p>Chrome, Firefox, IE, Safari, Opera, Microsoft Edge - DashDolphin loves all browsers; 
                     all browsers love DashDolphin.</p>
@@ -189,7 +210,7 @@
                 <div>
                     <h4>Frequent updates</h4>
                     <div>
-                        <i class="fas fa-wrench fa-3x"></i>
+                        <i class="fas fa-wrench fa-3x" style="color:grey"></i>
                     </div>
                     <p>DashDolphin becomes better every month. We love the software and enhance as much as possible.</p>
                 </div>
@@ -197,7 +218,7 @@
                 <div>
                     <h4>Competitive Pricing</h4>
                     <div>
-                                <i class="fas fa-award fa-3x"></i>
+                                <i class="fas fa-award fa-3x" style="color:#e6c200"></i>
                     </div>
                     <p>Our subscription is the cheapest available for the services we provide.</p>
                 </div>
@@ -205,7 +226,7 @@
                 <div>
                     <h4>Built by Amazon Sellers</h4>
                     <div>
-                        <i class="fas fa-users fa-3x"></i>
+                        <i class="fas fa-users fa-3x" style="color:green"></i>
                     </div>
                     <p>As Amazon Sellers, we know exactly what you need and what you don't, 
                     so we get straight to the point.</p>
@@ -213,43 +234,70 @@
                
       </div>
       <div class="testimonies-headline"><h3>Testimonies</h3></div>
-      <div class="testimonies" id="testimonies" data-aos-duration="1500" data-aos="zoom-out">
-                <div class="testimony">
+      <!-- <div class="testimonies carousel" data-flickity='{ "autoPlay": true }' id="testimonies" data-aos-duration="1200" data-aos="zoom-out">
+                <div class="testimony carousel-cell">
                         <img src="img/kkernen.jpeg" alt="Kennie Kernen's testimonial about software saving time" class="testimony-pics">
-                        <p>It used to be miserable pulling all these numbers out of seller central.
+                        <p>"It used to be miserable pulling all these numbers out of seller central.
                         Dash Dolphin not only saves 
-                                me tons of time but also helps me make better business decisions.<br>-Ken</p>
+                                me tons of time but also helps me make better business decisions."<br><span class="large-p">-Ken</span></p>
                 </div>
-                <div class="testimony">
+                <div class="testimony carousel-cell">
                         <img src="img/areed.jpeg" alt="Andy Reed's testimonial about easy set-up" class="testimony-pics">
                         <p>Wow! I was set up in less than 5 minutes and now I know how much money I’m really making. 
-                        I didn’t realize Amazon was charging me a lot of these sneaky fees.<br>-Andy</p>
+                        I didn’t realize Amazon was charging me a lot of these sneaky fees.<br><span class="large-p">-Andy</span></p>
                 </div>
-                <div class="testimony">
+                <div class="testimony carousel-cell">
                         <img src="img/kgay.jpeg" alt="Ken Gay's testimonial about simple UI" class="testimony-pics">
-                        <p>Easy to use dashboard. Clean and practical- a lot of great features!<br>-Kevin</p>
+                        <p>Easy to use dashboard. Clean and practical- a lot of great features!<br><span class="large-p">-Kevin</span></p>
                 </div>
-                <div class="testimony">
+                <div class="testimony carousel-cell">
                         <img src="img/alex.jpeg" alt="Alex's testimonial monitoring profits and cash flow" class="testimony-pics">
-                        <p>This software is amazing! Now I can monitor my profits and cash flows! Definitely a game changer.<br>-Alex</p>
+                        <p>This software is amazing! Now I can monitor my profits and cash flows! Definitely a game changer.<br><span class="large-p">-Alex</span></p>
                 </div>
-      </div>
+      </div> -->
+      <div class="testimonies ">
+                <div class="carousel first-carousel" ></div>
+      <div class="carousel">
+                <div class="carousel-cell">
+                                <img src="img/Alex.jpg" alt="Alex's testimonial monitoring profits and cash flow" class="testimony-pics">
+                                <p>This software is amazing! Now I can monitor my profits and cash flows! Definitely a game changer.<br><span class="large-p">-Alex</span></p>
+                        </div>
+                <div class="carousel-cell">
+                                <img src="img/kkernen.jpeg" alt="Kennie Kernen's testimonial about software saving time" class="testimony-pics">
+                                <p>"It used to be miserable pulling all these numbers out of seller central.
+                                                Dash Dolphin not only saves 
+                                                        me tons of time but also helps me make better business decisions."<br><span class="large-p">-Ken</span></p>
+                        </div>
+                <div class="carousel-cell">
+                                <img src="img/areed.jpeg" alt="Andy Reed's testimonial about easy set-up" class="testimony-pics">
+                                <p >Wow! I was set up in less than 5 minutes and now I know how much money I’m really making. 
+                                                I didn’t realize Amazon was charging me a lot of these sneaky fees.<br><span class="large-p">-Andy</span></p>
+                        </div>
+                <div class="carousel-cell">
+                                <img src="img/kgay.jpeg" alt="Ken Gay's testimonial about simple UI" class="testimony-pics">
+                                <p>Easy to use dashboard. Clean and practical- a lot of great features!<br><span class="large-p">-Kevin</span></p>
+                        </div>
+
+        </div>
+        </div>
 </div>
 
 <div>
-<a href="./pricing.html" id="final-action-button" class="staticPageBtn">get started</a>
+<a href="./pricing.html" id="final-action-button" class="staticPageBtn glow-red">get started</a>
 </div>
+
 <footer class="col-12 row" id="footer-main-page">
                 <div class="col-2">
                 <img src="img/dashdolphin-logo.png" id="dashdolphin-logo" alt="Dash Dolphin Logo"/>
                 </div>
                 <div class="col-8">
-                <button>COMING SOON</button>
                 <p>Questions? Email us! contact@DashDolphin.com</p>
-                </br>
+                <br>
                 <p>Owned and operated by <em>Indigo Softworks Inc.</em></p>
                 </div>
 </footer>
+
+
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -257,25 +305,100 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+
+<!-- animation -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<script>
-                // for fades
-                AOS.init();
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
-                //for disapearing navbar
+
+
+<script>
+                
+                // manages the color change of the navbar link depending on what link is chosen
+                $("nav a").on("click", function(){
+                $("nav").find(".active").removeClass("active");
+                $(this).addClass("active");
+                });
+
+
+                AOS.init();
+                
+                //the following eliminates the animation library if reduced motion is selected
+                // for MAC, only works on safari
+                  const query = '(prefers-reduced-motion: reduce)';
+                  const hasOSReducedMotion = window.matchMedia(query).matches;
+                  console.log(hasOSReducedMotion);
+                  if(hasOSReducedMotion){
+                          console.log("reduced");
+                          $('link[title=aos]').removeAttr("href");
+
+                  }else{
+                          console.log("not reduced");
+                          
+                  }
+
+
+                // since safari is the only browser that supports 'reduced motion', and since most people
+                // use firefox or chrome, i made a custom dialog box offering users to disable animations in-browser.
+                var disableTrue = $("#disable-true").click(function(){
+                        $('link[title=aos]').removeAttr("href");
+                        document.querySelector(".disable-animations").style.display = "none";                        
+                })
+                var disableFalse = $("#disable-false").click(function(){
+                        document.querySelector(".disable-animations").style.display = "none";                        
+                })
+                  
+
+
+
+
+                        var $carousel = $('.carousel').flickity({
+                        contain: true,
+                        // autoPlay: true,
+                        wrapAround: true,
+                        });
+
+                        var $imgs = $carousel.find('.carousel-cell img');
+                        var $txt = $carousel.find('.carousel-cell p')
+                        // get transform property
+                        var docStyle = document.documentElement.style;
+                        var transformProp = typeof docStyle.transform == 'string' ?
+                        'transform' : 'WebkitTransform';
+                        // get Flickity instance
+                        var flkty = $carousel.data('flickity');
+
+                        $carousel.on( 'scroll.flickity', function() {
+                        flkty.slides.forEach( function( slide, i ) {
+                        var img = $imgs[i];
+                        var txt = $txt[i];
+                        var x = ( slide.target + flkty.x ) * -1/3;
+                        img.style[ transformProp ] = 'translateX(' + x  + 'px)';
+                        txt.style[ transformProp ] = 'translateX(' + x  + 'px)';
+
+                        });
+                        });
+
+        
+                //keeps navbar from disapearing is mobile
+                // disapearing navbar only works on desktop. Detects if mobile
+                // also eliminates animations if on mobile
+                if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
+                
                 var prevScrollpos = window.pageYOffset;
                 window.onscroll = function() {
                 var currentScrollPos = window.pageYOffset;
                 if (prevScrollpos > currentScrollPos) {
                 document.querySelector(".navbar").style.top = "0";
+                $('link[title=aos]').removeAttr("href");
+
                 } else {
                 document.querySelector(".navbar").style.top = "-50px";
+
                 }
                 prevScrollpos = currentScrollPos;
                 }
-
-        
+                }
 	
 </script>
 </body>

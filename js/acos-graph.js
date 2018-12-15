@@ -1,7 +1,12 @@
 
 Highcharts.chart('acos-graph', {
     chart: {
-      type: 'line'
+      type: 'line',
+      labels: {
+          style: {
+              color: 'red'
+          }
+      },
     },
     title: {
       text: 'PPC Advertising Effectiveness'
@@ -26,7 +31,8 @@ Highcharts.chart('acos-graph', {
       }
     },
     series: [{
-      name: 'ACOS',
-      data: [20, 23, 19, 24, 22, 13, 14, 15, 21, 19, 20, 19]
+      name: "ACOS",
+      data: [20, 23, 19, 24, 22, 13, 14, 15, 21, 19, 20, 19],
+      color: "black",
     }]
   });

@@ -84,7 +84,9 @@
       display: block;
       margin: 4% 2% 4% 2%;
       font-family: 'Quicksand', sans-serif;
-      color: rgba(251, 38, 0,.9);
+      /* color: rgba(251, 38, 0,.9); */
+      color:black;
+      font-weight: bolder;
   }
 
 

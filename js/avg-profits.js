@@ -31,13 +31,13 @@ Highcharts.chart('avg-profits', {
         title: {
             text: 'Profit',
             style: {
-                color: Highcharts.getOptions().colors[0]
+                color: Highcharts.getOptions().colors[1]
             }
         },
         labels: {
             format: '${value}',
             style: {
-                color: Highcharts.getOptions().colors[0]
+                color: Highcharts.getOptions().colors[1]
             }
         },
         opposite: true

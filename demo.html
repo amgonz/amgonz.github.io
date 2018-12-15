@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="img/dashdolphin_favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" media="screen" href="style/bootstrap.min.css">
@@ -22,6 +22,8 @@
     <title>Demo</title>
 </head>
 <body>
+        <a class="skip-main" href="#main">Skip to main content</a>
+
         <header class="row">
                 <nav class="navbar navbar-default">
                         <div class="container-fluid">
@@ -41,7 +43,7 @@
                             <ul class="nav navbar-nav">
                                 <li><a href="faq.html">FAQ</a></li>
                                 <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="demo.html">Demo</a></li>
+                                <li><a class="active" href="demo.html">Demo</a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a href="#">Sign Up</a></li>
@@ -52,11 +54,11 @@
                       </nav>
         </header>
       
-<div class="grid-container" role="main">
+<div class="grid-container" >
   
   <div class="side-nav">
         <div id="side-fixed">
-        <div><a href="demo.html">Dashboard</a></div>
+        <div><a class="active-demo" href="demo.html">Dashboard</a></div>
               
             <div><a href="expenses.html">Expenses</a></div>
             
@@ -90,7 +92,7 @@
          </select>
         </div>
   </div>
-  <div class="quick-info">
+  <div class="quick-info" role="main" id="main" tabindex="-1">
         <div>
             <h6>$67,928</h6>
             <p>Revenues</p>
@@ -122,15 +124,16 @@
 </div>
 
 
-    <footer class="col-12">
+<footer class="col-12 row" id="footer-main-page">
         <div class="col-2">
         <img src="img/dashdolphin-logo.png" id="dashdolphin-logo" alt="Dash Dolphin Logo"/>
         </div>
         <div class="col-8">
-        <button>Start Free Tutorial</button>
         <p>Questions? Email us! contact@DashDolphin.com</p>
+        <br/>
+        <p>Owned and operated by <em>Indigo Softworks Inc.</em></p>
         </div>
-    </footer>
+</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- Latest compiled JavaScript -->
@@ -141,6 +144,34 @@
 <script src="js/donut-chart.js"></script>
 <script src="js/activity-chart.js"> </script>
 <script src="js/organic-to-ads.js"></script>
+<script>
 
+                // manages the color change of the navbar link depending on what link is chosen
+                $("nav a").on("click", function(){
+                $("nav").find(".active").removeClass("active");
+                $(this).addClass("active");
+                });
+
+    //keeps navbar from disapearing is mobile
+// disapearing navbar only works on desktop. Detects if mobile
+// also eliminates animations if on mobile
+if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+if (prevScrollpos > currentScrollPos) {
+document.querySelector(".navbar").style.top = "0";
+$('link[title=aos]').removeAttr("href");
+
+} else {
+document.querySelector(".navbar").style.top = "-50px";
+
+}
+prevScrollpos = currentScrollPos;
+}
+}
+
+</script>
 </body>
 </html>

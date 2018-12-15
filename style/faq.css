@@ -60,7 +60,7 @@
       font-size: 1em;
       font-family: 'Questrial', sans-serif;
     }
-    .active, .collapsible:hover, .collaspsible:hover:after {
+    .active, .collapsible:hover, .collaspsible:hover:after,.collapsible:focus {
         background-color: rgba(146, 146, 146, 0.664);
       }
     .content {

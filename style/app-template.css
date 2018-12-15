@@ -1,10 +1,11 @@
  
 /* side navigation styling */
+
 .side-nav {
     grid-area: side-nav;
     color: White;
-    background: rgb(253,187,45);
-    background: linear-gradient(0deg, rgb(253, 104, 45) 0%, rgba(255,0,0,.9) 100%);
+    background: rgba(251, 38, 0,.9);
+    background: linear-gradient(0deg, rgba(251, 38, 0,.9) 0%,rgba(200, 0, 0,.9) 100%);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -23,6 +24,8 @@
   }
   .side-nav a{
     color: white;
+    background-color:  rgba(200, 0, 0,.75);
+    font-weight: bolder;
     display: block;
     width: 100%;
     padding: 10% 0 10% 5%;
@@ -30,7 +33,7 @@
     border-left: none;
     border-right: none;
     border-bottom-color: rgba(190, 10, 0,.5);
-    border-top-color: rgba(248, 30, 18,.5);
+    border-top-color: rgb(248, 30, 18);
     font-size: 1em;
   }
   .side-nav a:first-child{
@@ -40,7 +43,7 @@
     border-bottom: none;
   }
   .side-nav a:hover{
-    background: rgba(254,14,0,.9);
+    background: rgb(254, 13, 0);
     background: linear-gradient(90deg, rgba(254,14,0,.9) 0%, rgba(251, 50, 0, 0.9) 53%, rgba(255, 72, 0, 0.9) 100%);
     border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
@@ -73,7 +76,7 @@ th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: rgba(251, 38, 0,.9);
+    background-color: rgba(200, 0, 0,.9);
     color: white;
 }
 h4 {
@@ -129,4 +132,16 @@ h4 {
     width: 13em;
     padding: 2em;  
   }
-  
+  .navbar{
+    position: relative;
+}
+
+/* background color */
+.right-margin, .grid-container, .top-row,body {
+  background-color: #eeeeee;
+}
+
+
+.active-demo{
+  font-size: 150% !important;
+}

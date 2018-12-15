@@ -8,11 +8,12 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="style/template.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="style/faq.css" />
-    <link href="https://fonts.googleapis.com/css?family=Heebo|Montserrat|Questrial" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Heebo|Montserrat|Questrial" rel="stylesheet"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <title>Frequently Asked Questions</title>
 </head>
 <body>
+        <a class="skip-main" href="#main">Skip to main content</a>
 
 
     <header>
@@ -32,7 +33,7 @@
                       <!-- Collect the nav links, forms, and other content for toggling -->
                       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a class="active" href="faq.html">FAQ</a></li>
                             <li><a href="pricing.html">Pricing</a></li>
                             <li><a href="demo.html">Demo</a></li>
                         </ul>
@@ -46,11 +47,11 @@
     </header>
 
     <section class="col-12" id="entire-content">
-    <div class="grid-container" role="main">
+    <div class="grid-container" >
         <div class="left-margin"></div>
         <div class="right-margin"></div>
         <div class="header">
-            <h1>Frequently Asked Questions</h1>
+            <h1  id="main" tabindex="-1">Frequently Asked Questions</h1>
         </div>
             <div class="c1">
                 <div>
@@ -135,13 +136,14 @@
 
     </div>
     </section>
-    <footer class="footer">
+    <footer class="col-12 row" id="footer-main-page">
             <div class="col-2">
             <img src="img/dashdolphin-logo.png" id="dashdolphin-logo" alt="Dash Dolphin Logo"/>
             </div>
             <div class="col-8">
-            <button>COMING SOON</button>
             <p>Questions? Email us! contact@DashDolphin.com</p>
+            <br/>
+            <p>Owned and operated by <em>Indigo Softworks Inc.</em></p>
             </div>
     </footer>
     <script src="js/faq-collapse.js"></script>
@@ -151,5 +153,37 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+
+
+                // manages the color change of the navbar link depending on what link is chosen
+                $("nav a").on("click", function(){
+                $("nav").find(".active").removeClass("active");
+                $(this).addClass("active");
+                });
+
+
+            //keeps navbar from disapearing is mobile
+        // disapearing navbar only works on desktop. Detects if mobile
+        // also eliminates animations if on mobile
+        if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
+
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+        document.querySelector(".navbar").style.top = "0";
+        $('link[title=aos]').removeAttr("href");
+
+        } else {
+        document.querySelector(".navbar").style.top = "-50px";
+
+        }
+        prevScrollpos = currentScrollPos;
+        }
+        }
+
+</script>
     </body>
 </html>
