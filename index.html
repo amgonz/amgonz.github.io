@@ -390,7 +390,6 @@
                 var currentScrollPos = window.pageYOffset;
                 if (prevScrollpos > currentScrollPos) {
                 document.querySelector(".navbar").style.top = "0";
-                $('link[title=aos]').removeAttr("href");
 
                 } else {
                 document.querySelector(".navbar").style.top = "-50px";
@@ -398,6 +397,9 @@
                 }
                 prevScrollpos = currentScrollPos;
                 }
+                }else{
+                $('link[title=aos]').removeAttr("href");
+
                 }
 	
 </script>
