@@ -1,23 +1,32 @@
 
 Highcharts.chart('donut-chart', {
     chart: {
-        type: 'pie',
-        options3d: {
-            enabled: true,
-            alpha: 45
-        }
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
     },
     title: {
         text: 'Cost Breakdown'
     },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
     plotOptions: {
         pie: {
-            innerSize: 100,
-            depth: 45
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
         }
     },
     series: [{
-        name: 'Delivered amount',
+        colorByPoint: true,
         data: [
             ['FBA Fees', 983],
             ['Royalties', 392],
