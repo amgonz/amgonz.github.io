@@ -61,7 +61,7 @@
       font-family: 'Questrial', sans-serif;
     }
     .active, .collapsible:hover, .collaspsible:hover:after,.collapsible:focus {
-        background-color: rgba(146, 146, 146, 0.664);
+        background-color: rgba(146, 146, 146, 0.664) !important;
       }
     .content {
         padding: 0 18px;
