@@ -41,7 +41,7 @@
                       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li><a href="faq.html">FAQ</a></li>
-                            <li><a class="active" href="pricing.html">Pricing</a></li>
+                            <li><a class="active-nav" href="pricing.html">Pricing</a></li>
                             <li><a href="demo.html">Demo</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
@@ -141,11 +141,11 @@
 
                 // manages the color change of the navbar link depending on what link is chosen
                 $("nav a").on("click", function(){
-                $("nav").find(".active").removeClass("active");
-                $(this).addClass("active");
+                $("nav").find(".active-nav").removeClass("active-nav");
+                $(this).addClass("active-nav");
                 });
 
-                
+
                     //keeps navbar from disapearing is mobile
                 // disapearing navbar only works on desktop. Detects if mobile
                 // also eliminates animations if on mobile
